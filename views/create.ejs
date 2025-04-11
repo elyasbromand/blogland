@@ -1,0 +1,40 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+          <h2 class="card-title text-center mb-4 text-primary">📝 What’s on your mind?</h2>
+          <form action="/create" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="title" class="form-label">Blog Title</label>
+              <input type="text" class="form-control" id="title" name="title" placeholder="Enter your blog title" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="author" class="form-label">Author Name</label>
+              <input type="text" class="form-control" id="author" name="author" placeholder="Your name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="blog" class="form-label">Blog Content</label>
+              <textarea class="form-control" id="blog" name="blog" rows="6" placeholder="Write your blog here..." required></textarea>
+            </div>
+<!-- if in case I added the photo upload feature, habibi -->
+            <!-- <div class="mb-4">
+              <label for="photo" class="form-label">Upload Image</label>
+              <input class="form-control" type="file" id="photo" name="photo" accept="image/*">
+            </div> -->
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Publish Blog</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+   
+    <%- include('./partials/footer.ejs') %>

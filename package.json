@@ -1,0 +1,17 @@
+{
+  "name": "4.5-blog-web-application",
+  "version": "1.0.0",
+  "description": "My first Blog Web Application",
+  "license": "ISC",
+  "author": "Elyas Bromand",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
