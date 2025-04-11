@@ -1,0 +1,73 @@
+
+<%- include('./partials/header.ejs') %>
+
+    <!-- featured Blog -->
+    <div class="container">
+      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary d-flex flex-column flex-lg-row">
+        <div class="col-lg-6 px-0">
+          <h1 class="display-4 fst-italic"><%= blogs[0].title %></h1>
+          <p class="lead my-3"><%= blogs[0].blog.substring(0,200) %>...</p>
+          <p class="lead mb-0">
+            <a href="/viewBlog/<%= 0 %>" class="text-body-emphasis fw-bold">Continue reading...</a>
+          </p>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center align-items-center mt-4 mt-lg-0">
+          <img src="./images/lucid.jpg" alt="lucid dream" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+    
+
+<!-- if new blog is created -->
+<div class="container">
+<% if (locals.created) { %><%= created %> <% } %>
+</div>
+
+<!-- display the blogs -->
+<div class="container d-flex flex-wrap justify-content-start gap-5">
+  <% if (locals.blogs) { 
+    for (let i = 0; i < blogs.length; i++) { %>
+
+    <div class="col-md-5 mb-4 d-flex">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm w-100 d-flex flex-column justify-content-between" style="min-height: 250px;">
+
+        <!-- Blog content -->
+        <div class="col p-4 d-flex flex-column">
+          <h3 class="mb-0"><%= blogs[i].title %></h3>
+          <div class="mb-1 text-body-secondary"><%= blogs[i].author %></div>
+          <p class="card-text mb-auto"><%= blogs[i].blog.substring(0, 200) %>...</p>
+          <a href="/viewBlog/<%= i %>" class="icon-link gap-1 icon-link-hover mt-2">
+            Continue reading...
+            <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>
+
+        <!-- Edit/Delete Buttons -->
+        <div class="d-flex flex-row justify-content-end align-items-end p-3 pt-0 gap-2">
+    <form action="/edit" method="post">
+    <input type="hidden" name="index" value="<%= i %>">
+    <button type="submit" class="btn btn-warning btn-md" style="padding: 4px 25px;">Edit</button>
+    </form>
+    <form action="/delete" method="post" onsubmit="return confirm('Are you sure you want to delete this blog?');">
+    <input type="hidden" name="index" value="<%= i %>">
+    <button type="submit" class="btn btn-danger btn-md" style="padding: 4px 16px;">Delete</button>
+    </form>
+</div>
+
+
+      </div>
+    </div>
+
+  <% } 
+  } else { %>
+    <div>
+      <h1>No Blog to preview</h1>
+    </div>
+  <% } %>
+</div>    
+        
+        
+    
+
+
+    <%- include('./partials/footer.ejs') %>
