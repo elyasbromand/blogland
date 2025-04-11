@@ -45,6 +45,10 @@ app.get("/viewBlog/:index", (req, res) => {
   res.render("viewBlog.ejs", { blogs: blogs[index] });
 });
 
+app.get("/about", (req,res) => {
+  res.render("about.ejs");
+})
+
 app.post("/edit", (req, res) => {
   let index = req.body["index"];
   res.render("edit.ejs", { blog: blogs[index], index: index });
