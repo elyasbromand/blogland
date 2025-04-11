@@ -30,7 +30,7 @@ app.get("/createPage", (req, res) => {
 
 app.post("/create", (req, res) => {
   console.log(req.body);
-
+  console.log(req.body["title"]);
   var data = {
     title: req.body["title"],
     author: req.body["author"],
