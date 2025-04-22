@@ -77,17 +77,17 @@ app.listen(port, () => {
 
 var blogs = [
     {
-        title: "🧠 The Science Behind Lucid Dreaming: Hacking Your Dreams Like a Pro",
+        title: "The Science Behind Lucid Dreaming: Hacking Your Dreams Like a Pro",
         author: "Elyas Bromand",
         blog: `Ever realized you're dreaming while you're dreaming? That’s lucid dreaming, and yes — it’s real, trainable, and kinda like your personal version of Inception. 😴✨
 
-🌀 What is Lucid Dreaming?
+What is Lucid Dreaming?
 Lucid dreaming is the state where you become aware that you’re dreaming, and with practice, you can even control the dream — from flying through alien galaxies to having deep convos with Einstein’s ghost (no cap 😅).
 
-🧬 The Brain on Lucid Dreams
+The Brain on Lucid Dreams
 In a lucid dream, the prefrontal cortex (your logical decision-making brain) stays more active than usual. It’s like your imagination gets a cheat code — you’re asleep, but still slightly “awake” inside.
 
-🔧 How to Train Yourself to Lucid Dream
+How to Train Yourself to Lucid Dream
 Want to try? Here’s a quick training guide:
 
 Reality Checks: Ask yourself “Am I dreaming?” multiple times a day. Try pushing your finger through your palm or reading a text twice.
@@ -98,7 +98,7 @@ Wake Back to Bed (WBTB): Wake up after 5–6 hours of sleep, stay awake for 20 m
 
 Meditation: Being mindful while awake helps you stay conscious while dreaming.
 
-🤯 Cool Things You Can Do in Lucid Dreams
+Cool Things You Can Do in Lucid Dreams
 Fly through cities like Superman
 
 Talk to your subconscious
@@ -107,7 +107,7 @@ Rehearse for public speaking or creative ideas
 
 Solve real-life problems with dream logic
 
-🎯 Final Thought
+Final Thought
 Lucid dreaming is one of the coolest ways to explore the limitless world inside your head. It's safe, it’s natural, and it's totally sci-fi in real life.
 
 So next time you go to bed, remember: You might just be the main character in your own dream multiverse.
